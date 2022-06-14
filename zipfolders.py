@@ -23,4 +23,7 @@ subfolders = os.listdir(folder)
 absolute_paths = []
 for subfolder in subfolders:
     absolute_paths.append(os.path.join(folder,subfolder))
-zipit(absolute_paths, r"C:\Users\vivian\Downloads\test\test.zip")
+zipname = os.path.basename(folder)+".zip"
+#create a zip path under the same folder, with the same name as the folder name
+zippath = os.path.join(folder,zipname)
+zipit(absolute_paths, zippath)
